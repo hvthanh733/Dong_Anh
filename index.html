@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Làm người yêu anh nhé? ❤️</title>
+    <link rel="stylesheet" href="./assets/style.css">
+  </head>
+  <body>
+    <h1>Em làm người yêu anh nhé? 🥰</h1>
+    <h3>Gửi công chúa nhà họ Doãn - Doãn Đông Anhh</h3>
+    <div class="buttons">
+      <button id="yes">Có ❤️</button>
+      <button id="no">Không 😭</button>
+    </div>
+
+    <script>
+      const noButton = document.getElementById("no");
+
+      function randomizeButtonPosition(button) {
+        const maxWidth = window.innerWidth - button.clientWidth;
+        const maxHeight = window.innerHeight - button.clientHeight;
+        const newX = Math.random() * maxWidth;
+        const newY = Math.random() * maxHeight;
+
+        button.style.left = `${newX}px`;
+        button.style.top = `${newY}px`;
+      }
+
+      noButton.addEventListener("mouseenter", function () {
+        randomizeButtonPosition(noButton);
+      });
+
+      noButton.addEventListener("click", function () {
+        randomizeButtonPosition(noButton);
+      });
+
+      document.getElementById("yes").addEventListener("click", function () {
+        alert("Yay! Anh biết mà 😘");
+      });
+    </script>
+  </body>
+</html>
